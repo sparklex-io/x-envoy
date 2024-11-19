@@ -1,0 +1,260 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_globalExitRootManager",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_bridgeAddress",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "ChainIDAlreadyExist",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidInitialization",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NotInitializing",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint32",
+        "name": "networkID",
+        "type": "uint32"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "forkID",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "chainID",
+        "type": "uint64"
+      }
+    ],
+    "name": "AddNetwork",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "version",
+        "type": "uint64"
+      }
+    ],
+    "name": "Initialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint32",
+        "name": "networkID",
+        "type": "uint32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "newLocalExitRoot",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "UpdateLocalExitRoot",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "forkID",
+        "type": "uint64"
+      },
+      {
+        "internalType": "uint64",
+        "name": "chainID",
+        "type": "uint64"
+      }
+    ],
+    "name": "addNetwork",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "bridgeAddress",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "chainID",
+        "type": "uint64"
+      }
+    ],
+    "name": "chainIDToNetworkID",
+    "outputs": [
+      {
+        "internalType": "uint32",
+        "name": "networkID",
+        "type": "uint32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getNetworkExitRoot",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "globalExitRootManager",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "admin",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "timelock",
+        "type": "address"
+      },
+      {
+        "internalType": "uint64",
+        "name": "forkID",
+        "type": "uint64"
+      },
+      {
+        "internalType": "uint64",
+        "name": "chainID",
+        "type": "uint64"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "networkCount",
+    "outputs": [
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint32",
+        "name": "networkID",
+        "type": "uint32"
+      }
+    ],
+    "name": "networkIDToNetworkData",
+    "outputs": [
+      {
+        "internalType": "uint64",
+        "name": "chainID",
+        "type": "uint64"
+      },
+      {
+        "internalType": "uint64",
+        "name": "forkID",
+        "type": "uint64"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "lastLocalExitRoot",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint32",
+        "name": "networkID",
+        "type": "uint32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "newLocalExitRoot",
+        "type": "bytes32"
+      }
+    ],
+    "name": "updateLocalExitRoot",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

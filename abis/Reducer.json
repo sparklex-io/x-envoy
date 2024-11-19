@@ -1,0 +1,391 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      {
+        "name": "_networkManager",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "MAX_INT",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "P",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "SQRT_MAX_INT",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "binomialCDF",
+    "inputs": [
+      {
+        "name": "x",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "mean",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "sd",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "int256",
+        "internalType": "int256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "binomialCDFv2",
+    "inputs": [
+      {
+        "name": "n",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "p",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "k",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "int256",
+        "internalType": "int256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "computeFastVerifyParams",
+    "inputs": [
+      {
+        "name": "_publicKey",
+        "type": "uint256[2]",
+        "internalType": "uint256[2]"
+      },
+      {
+        "name": "_proof",
+        "type": "uint256[4]",
+        "internalType": "uint256[4]"
+      },
+      {
+        "name": "_newState",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256[2]",
+        "internalType": "uint256[2]"
+      },
+      {
+        "name": "",
+        "type": "uint256[4]",
+        "internalType": "uint256[4]"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "decodeProof",
+    "inputs": [
+      {
+        "name": "_proof",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256[4]",
+        "internalType": "uint256[4]"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "depositCounts",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "networkManager",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract INetworkManager"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "ratioFromHash",
+    "inputs": [
+      {
+        "name": "_hash",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "verifyVotingPower",
+    "inputs": [
+      {
+        "name": "_p",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_stake",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_votingPower",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "voteFastForMessageState",
+    "inputs": [
+      {
+        "name": "_vote",
+        "type": "tuple",
+        "internalType": "struct VoteFastPayload",
+        "components": [
+          {
+            "name": "publicKey",
+            "type": "uint256[2]",
+            "internalType": "uint256[2]"
+          },
+          {
+            "name": "proof",
+            "type": "uint256[4]",
+            "internalType": "uint256[4]"
+          },
+          {
+            "name": "uPoint",
+            "type": "uint256[2]",
+            "internalType": "uint256[2]"
+          },
+          {
+            "name": "vComponents",
+            "type": "uint256[4]",
+            "internalType": "uint256[4]"
+          },
+          {
+            "name": "votingPower",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "stake",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "message",
+            "type": "tuple",
+            "internalType": "struct MessagePayload",
+            "components": [
+              {
+                "name": "networkId",
+                "type": "uint32",
+                "internalType": "uint32"
+              },
+              {
+                "name": "depositCount",
+                "type": "uint32",
+                "internalType": "uint32"
+              },
+              {
+                "name": "state",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "voteForMessageState",
+    "inputs": [
+      {
+        "name": "_vote",
+        "type": "tuple",
+        "internalType": "struct VotePayload",
+        "components": [
+          {
+            "name": "publicKey",
+            "type": "uint256[2]",
+            "internalType": "uint256[2]"
+          },
+          {
+            "name": "proof",
+            "type": "uint256[4]",
+            "internalType": "uint256[4]"
+          },
+          {
+            "name": "votingPower",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "stake",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "message",
+            "type": "tuple",
+            "internalType": "struct MessagePayload",
+            "components": [
+              {
+                "name": "networkId",
+                "type": "uint32",
+                "internalType": "uint32"
+              },
+              {
+                "name": "depositCount",
+                "type": "uint32",
+                "internalType": "uint32"
+              },
+              {
+                "name": "state",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "StateUpdated",
+    "inputs": [
+      {
+        "name": "networkId",
+        "type": "uint32",
+        "indexed": false,
+        "internalType": "uint32"
+      },
+      {
+        "name": "state",
+        "type": "bytes32",
+        "indexed": false,
+        "internalType": "bytes32"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "error",
+    "name": "Min",
+    "inputs": []
+  }
+]
